@@ -103,8 +103,10 @@ CV-Builder-TW-VanillaJs is a comprehensive resume builder that guides users thro
 ## <div id="project-structure">📁 Project Structure</div>
 
 ```
-📦 CV-Builder-TW-VanillaJs
 ├── 📂 assets/
+│   ├── 📂 config/
+│   │   ├── 📄 tailwind.config.js     # TailwindCSS configuration
+│   │   └── 📄 postcss.config.js      # PostCSS configuration for Tailwind
 │   ├── 📂 js/
 │   │   └── 📄 app.js                  # Main application logic with modular functions
 │   ├── 📂 css/
@@ -117,7 +119,6 @@ CV-Builder-TW-VanillaJs is a comprehensive resume builder that guides users thro
 │       ├── 📄 template1.html          # Modern minimalist CV design (TailwindCSS)
 │       └── 📄 template2.html          # Classic professional CV layout (TailwindCSS)
 ├── 📄 index.html                      # Main HTML with stepper form and template preview area
-├── 📄 tailwind.config.js              # TailwindCSS configuration
 └── 📄 README.md                       # Project documentation
 ```
 
