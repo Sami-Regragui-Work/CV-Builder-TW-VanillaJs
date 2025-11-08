@@ -1,0 +1,46 @@
+[
+    {
+        "id": "1",
+        "title": "Personal Informations"
+    },
+    {
+        "id": "2",
+        "title": "Professional Experience"
+    },
+    {
+        "id": "3",
+        "title": "Completed Projects"
+    },
+    {
+        "id": "4",
+        "title": "Education"
+    },
+    {
+        "id": "5",
+        "title": "Technical Skills"
+    },
+    {
+        "id": "6",
+        "title": "Soft Skills"
+    },
+    {
+        "id": "7",
+        "title": "Languages"
+    },
+    {
+        "id": "8",
+        "title": "Certifications"
+    },
+    {
+        "id": "9",
+        "title": "Hobbies & Interests"
+    },
+    {
+        "id": "10",
+        "title": "Template Preview"
+    },
+    {
+        "id": "11",
+        "title": "Generate"
+    }
+]

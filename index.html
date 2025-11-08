@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <script src="./assets/js/app.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body class="bg-(--title-white-clr) overflow-x-hidden">
+        <header class="bg-(--secondary-clr) text-(--title-white-clr) font-bold">
+            <div
+                class="container flex justify-between min-w-full items-center bg-(--secondary-clr) fixed"
+            >
+                <a
+                    href="index.html"
+                    class="header__left flex items-center gap-2"
+                >
+                    <span class="header__logo"
+                        ><svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 200 200"
+                            class="h-18"
+                        >
+                            <!-- Background Circle -->
+                            <circle
+                                cx="100"
+                                cy="100"
+                                r="95"
+                                fill="var(--primary-grad-clr)"
+                            />
+
+                            <!-- Document Paper -->
+                            <rect
+                                x="60"
+                                y="50"
+                                width="80"
+                                height="100"
+                                rx="4"
+                                class="fill-white"
+                            />
+
+                            <!-- Document Lines (representing CV content) -->
+                            <line
+                                x1="70"
+                                y1="65"
+                                x2="110"
+                                y2="65"
+                                class="stroke-blue-600 stroke-2"
+                                stroke-linecap="round"
+                            />
+                            <line
+                                x1="70"
+                                y1="75"
+                                x2="130"
+                                y2="75"
+                                class="stroke-gray-400 stroke-2"
+                                stroke-linecap="round"
+                            />
+                            <line
+                                x1="70"
+                                y1="85"
+                                x2="125"
+                                y2="85"
+                                class="stroke-gray-400 stroke-2"
+                                stroke-linecap="round"
+                            />
+
+                            <!-- Section divider -->
+                            <line
+                                x1="70"
+                                y1="95"
+                                x2="130"
+                                y2="95"
+                                class="stroke-blue-400 stroke-1"
+                                stroke-linecap="round"
+                            />
+
+                            <!-- More content lines -->
+                            <line
+                                x1="70"
+                                y1="105"
+                                x2="120"
+                                y2="105"
+                                class="stroke-gray-400 stroke-2"
+                                stroke-linecap="round"
+                            />
+                            <line
+                                x1="70"
+                                y1="115"
+                                x2="130"
+                                y2="115"
+                                class="stroke-gray-400 stroke-2"
+                                stroke-linecap="round"
+                            />
+                            <line
+                                x1="70"
+                                y1="125"
+                                x2="115"
+                                y2="125"
+                                class="stroke-gray-400 stroke-2"
+                                stroke-linecap="round"
+                            />
+
+                            <!-- Pencil/Edit Icon -->
+                            <g transform="translate(115, 120)">
+                                <!-- Pencil body -->
+                                <rect
+                                    x="0"
+                                    y="0"
+                                    width="8"
+                                    height="25"
+                                    rx="1"
+                                    class="fill-yellow-400"
+                                    transform="rotate(45 4 12.5)"
+                                />
+                                <!-- Pencil tip -->
+                                <polygon
+                                    points="4,30 0,22 8,22"
+                                    class="fill-gray-700"
+                                    transform="rotate(45 4 26)"
+                                />
+                                <!-- Pencil eraser -->
+                                <rect
+                                    x="0"
+                                    y="-5"
+                                    width="8"
+                                    height="5"
+                                    rx="1"
+                                    class="fill-pink-400"
+                                    transform="rotate(45 4 -2.5)"
+                                />
+                            </g>
+
+                            <!-- Sparkle/Magic effect (representing "builder") -->
+                            <g class="fill-yellow-300">
+                                <circle cx="50" cy="60" r="2" />
+                                <circle cx="48" cy="70" r="1.5" />
+                                <circle cx="150" cy="80" r="2" />
+                                <circle cx="155" cy="130" r="1.5" />
+                            </g></svg
+                    ></span>
+                    <h2 class="header__title text-5xl">CV Builder</h2>
+                </a>
+                <nav class="flex">
+                    <ul class="flex justify-between gap-6 text-2xl">
+                        <li><a href="#">Make Cv</a></li>
+                        <li><a href="#">See Templates</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path
+                    fill="var(--primary-grad-clr)"
+                    fill-opacity="1"
+                    d="M0,192L40,197.3C80,203,160,213,240,208C320,203,400,181,480,144C560,107,640,53,720,32C800,11,880,21,960,48C1040,75,1120,117,1200,160C1280,203,1360,245,1400,266.7L1440,288L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+                    data--h-bstatus="0OBSERVED"
+                ></path>
+            </svg>
+        </header>
+        <main>
+            <div class="container gap-4">
+                <aside id="main__aside" class="self-start hidden">
+                    <ol
+                        id="main__stepper"
+                        class="main__stepper flex flex-col gap-10 flex-wrap [&_li]:bg-(--primary-clr) [&_li]:rounded-3xl text-(--title-white-clr) font-bold text-2xl [&_li]:h-12 [&_li]:w-2xs [&_li]:flex [&_li]:justify-center [&_li]:items-center overflow-y-hidden"
+                    >
+                        <!-- <li class="passedStep currentStep">
+                            Personal Informations
+                        </li>
+                        <li class="">Professional Experience</li>
+                        <li class="">Completed Projects</li>
+                        <li class="">Education</li>
+                        <li class="">Technical Skills</li>
+                        <li class="">Soft Skills</li>
+                        <li class="">Languages</li>
+                        <li class="">Certifications</li>
+                        <li class="">Hobbies & Interests</li>
+                        <li class="">Template Preview</li>
+                        <li class="">Generate</li> -->
+                    </ol>
+                </aside>
+                <div
+                    class="main__center flex items-center text-center flex-col gap-5 mx-auto"
+                >
+                    <h1
+                        id="main__title"
+                        class="flex justify-center text-(--title-black-clr) font-semibold text-2xl"
+                    ></h1>
+                    <section class="w-full">
+                        <form action="" class="flex flex-col items-center">
+                            <div
+                                class="form__replaceable felx flex-col gap-5"
+                            ></div>
+                            <div class="btns flex justify-around w-full">
+                                <button
+                                    id="previous-btn"
+                                    class="btn btn--secondary hidden"
+                                    disabled
+                                >
+                                    Previous
+                                </button>
+                                <button
+                                    id="next-btn"
+                                    class="btn btn--primary makeCv"
+                                ></button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

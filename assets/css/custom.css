@@ -1,0 +1,71 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss";
+
+:root {
+    --primary-clr: #4d8660;
+    --secondary-clr: #1d5c95;
+    --primary-grad-clr: #9ec872;
+    --secondary-grad-clr: #5095b1;
+    --title-white-clr: #f1f7f4;
+    --title-black-clr: #0e1318;
+    --secondary-text-clr: #575a5e;
+    /* --grad: linear-gradient(); */
+}
+
+html {
+    font-size: 10px;
+}
+
+.container {
+    @apply flex px-12 py-8 max-w-[1440px];
+}
+
+header a:hover {
+    color: var(--primary-grad-clr);
+}
+
+.btn {
+    @apply text-2xl font-bold w-32 h-14 rounded-2xl cursor-pointer disabled:opacity-50 disabled:pointer-events-none select-none;
+}
+
+.btn--primary {
+    @apply bg-(--secondary-grad-clr) text-(--title-white-clr) hover:border-2 hover:border-(--secondary-grad-clr) hover:text-(--secondary-grad-clr) hover:bg-(--title-white-clr);
+}
+
+.btn--secondary {
+    @apply border-2 border-(--secondary-grad-clr) text-(--secondary-grad-clr) hover:bg-(--secondary-grad-clr) hover:text-(--title-white-clr);
+}
+
+.main__stepper > li {
+    cursor: pointer;
+}
+
+.main__stepper,
+.main__stepper li {
+    position: relative;
+}
+
+.main__stepper::before {
+    @apply absolute content-[''] inline-block w-3 h-full bg-(--primary-clr) -z-20 left-1/2;
+}
+
+.currentStep {
+    @apply border-2 border-(--primary-clr);
+}
+
+.passedStep {
+    @apply bg-(--primary-grad-clr);
+}
+
+.passedStep:not(:last-child)::after {
+    /* @apply absolute content-[''] inline-block w-3 h-22 bg-(--primary-grad-clr) -z-10 left-1/2; */
+    @apply absolute content-[''] inline-block w-3 top-10 h-7 bg-(--primary-grad-clr) left-1/2;
+}
+
+.passedStep:not(:first-child)::before {
+    /* @apply absolute content-[''] inline-block w-3 h-22 bg-(--primary-grad-clr) -z-10 left-1/2; */
+    @apply absolute content-[''] inline-block w-3 -top-6 h-6 bg-(--primary-grad-clr) left-1/2;
+}

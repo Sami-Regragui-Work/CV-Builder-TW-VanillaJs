@@ -103,23 +103,22 @@ CV-Builder-TW-VanillaJs is a comprehensive resume builder that guides users thro
 ## <div id="project-structure">📁 Project Structure</div>
 
 ```
+📦 CV-Builder-TW-VanillaJs
 ├── 📂 assets/
-│   ├── 📂 config/
-│   │   ├── 📄 tailwind.config.js     # TailwindCSS configuration
-│   │   └── 📄 postcss.config.js      # PostCSS configuration for Tailwind
+│   ├── 📂 css/
+│   │   ├── 📄 custom.css              # Tailwind import and custom styles (linked in index.html)
+│   │   └── 📄 styles.css              # Tailwind CSS output file
+│   ├── 📂 images/                     # Screenshots and template previews
 │   ├── 📂 js/
 │   │   └── 📄 app.js                  # Main application logic with modular functions
-│   ├── 📂 css/
-│   │   └── 📄 custom.css              # Custom styles complementing TailwindCSS
-│   ├── 📂 images/
-│   │   ├── 🖼️ template-preview-1.png # CV template 1 filled preview
-│   │   ├── 🖼️ template-preview-2.png # CV template 2 filled preview
-│   │   └── 🖼️ demo-screenshot.png    # Application demo screenshot
-│   └── 📂 templates/
-│       ├── 📄 template1.html          # Modern minimalist CV design (TailwindCSS)
-│       └── 📄 template2.html          # Classic professional CV layout (TailwindCSS)
+│   ├── 📂 templates/
+│   │   ├── 📄 template1.html          # Modern minimalist CV design (TailwindCSS)
+│   │   └── 📄 template2.html          # Classic professional CV layout (TailwindCSS)
+│   └── 📄 localData.json              # Local data storage/configuration
 ├── 📄 index.html                      # Main HTML with stepper form and template preview area
-└── 📄 README.md                       # Project documentation
+├── 📄 package-lock.json               # NPM dependency lock file
+├── 📄 package.json                    # NPM project configuration
+└── 📄 Readme.md                       # Project documentation
 ```
 
 ### File Descriptions
