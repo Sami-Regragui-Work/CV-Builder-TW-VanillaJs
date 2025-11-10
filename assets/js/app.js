@@ -1,15 +1,25 @@
 document.addEventListener("DOMContentLoaded", main);
-
+/**
+ * @type {Array} - taken from data json
+ */
 let forms;
+/**
+ * @type {Number} - tracking stepper form steps
+ */
 let stepNum;
 
+// ids
 const mainTitle = document.getElementById("main__title");
 const nextBtn = document.getElementById("next-btn");
 const stepper = document.getElementById("main__stepper");
 const aside = document.getElementById("main__aside");
 const previousBtn = document.getElementById("previous-btn");
-// const
+const dynamicForm = document.querySelector(".form__replaceable");
 
+/**
+ * @function fetchData - fetch data from local json file to build form and progress bar later
+ * @param {function} callback - to call fillStepper after the fetch ends
+ */
 const fetchData = (callback) => {
     fetch("assets/localData.json")
         .then((res) => res.json())
@@ -35,46 +45,123 @@ const fillStepper = () => {
     });
 };
 
+const createInput = (infos) => {
+    let input = document.createElement("input");
+    input.type = infos.type;
+
+    if (infos.type === "file") {
+        input.accept = "image/*";
+        input.className =
+            "block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 cursor-pointer"; // this style is from ai
+    } else {
+        input.className =
+            "w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"; // same here
+
+        if (infos.placeHolder) {
+            input.placeholder = infos.placeHolder;
+        }
+    }
+
+    input.id = infos.label;
+    input.required = infos.required;
+    input.value = infos.data;
+
+    return input;
+};
+
+const createLabelInputDiv = (infos) => {
+    let labInpDiv = document.createElement("div");
+
+    // if (infos.type === "file")
+    labInpDiv.className =
+        infos.type === "file"
+            ? "flex flex-col items-center gap-2 w-full"
+            : "flex flex-col items-start gap-2 w-full";
+
+    let lab = document.createElement("label");
+    lab.htmlFor = infos.label;
+    lab.className = "text-2xl font-bold text-(--title-black-clr)";
+    lab.textContent = infos.label;
+
+    if (infos.required) {
+        let requiredSpan = document.createElement("span");
+        requiredSpan.className = "text-(--danger-clr) ml-1";
+        requiredSpan.textContent = "*";
+        lab.appendChild(requiredSpan);
+    }
+
+    let inp = createInput(infos);
+
+    labInpDiv.appendChild(lab);
+    labInpDiv.appendChild(inp);
+    return labInpDiv;
+};
+
+const fillForm = () => {
+    dynamicForm.innerHTML = "";
+    if (stepNum > 9) return;
+    let inputsArr = forms.filter((aForm) => aForm.id == stepNum)[0].formInputs;
+    console.log();
+    inputsArr.forEach((row) => {
+        let labInpDiv = createLabelInputDiv(row);
+        dynamicForm.appendChild(labInpDiv);
+    });
+};
+
+const nextProgressBar = () => {
+    let step = stepper.querySelector(`[data-id='${stepNum}']`);
+    step.classList.add("currentStep", "passedStep");
+    let previousStep = step.previousElementSibling;
+    // console.log(stepNum);
+    if (previousStep) previousStep.classList.remove("currentStep");
+    if (stepNum < 10) updateMainTitle(step);
+};
+
 const nextAction = (e) => {
-    // e.target;
+    // TODO: next button click logic
+    // prevent default
+    // change its text once
+    // show sidebar once
+    // enable previous when step is 2
+    // disable itself when at last step
+    // move the progress bar to next
     e.preventDefault();
+
     if (e.target.classList.contains("makeCv")) {
         e.target.classList.remove("makeCv");
         aside.classList.remove("hidden");
         e.target.textContent = "Next";
         previousBtn.classList.remove("hidden");
         stepNum = 0;
-    } else {
-        previousBtn.removeAttribute("disabled");
     }
-    stepNum++;
-    let step = stepper.querySelector(`[data-id='${stepNum}']`);
-    step.classList.add("currentStep", "passedStep");
 
-    // let nextStep = step.nextElementSibling;
-    // let nextStep = stepNum;
-    // nextStep.classList.add("currentStep", "passedStep");
-    // step.classList.remove("currentStep");
-    // if (step.textContent === "1")
-    let previousStep = step.previousElementSibling;
-    // console.log(stepNum);
-    if (previousStep) previousStep.classList.remove("currentStep");
-    if (stepNum < 10) updateMainTitle(step);
+    stepNum++;
+    if (stepNum == 2) previousBtn.disabled = false;
     else if (stepNum == 11) e.target.disabled = true;
+
+    nextProgressBar();
+    fillForm();
 };
 
-const previousAction = (e) => {
-    e.preventDefault();
-    stepNum--;
+const previousProgressBar = () => {
     let step = stepper.querySelector(`[data-id='${stepNum}']`);
     step.classList.add("currentStep");
     let nextStep = step.nextElementSibling;
     // console.log(stepNum);
     nextStep.classList.remove("passedStep");
     nextStep.classList.remove("currentStep");
+    if (stepNum < 10) updateMainTitle(step);
+};
+
+const previousAction = (e) => {
+    e.preventDefault();
+
+    stepNum--;
     if (stepNum == 1) e.target.disabled = true;
     else if (stepNum == 10) nextBtn.disabled = false;
-    if (stepNum < 10) updateMainTitle(step);
+
+    previousProgressBar();
+    fillForm();
 };
 
 const navigateStepper = (e) => {

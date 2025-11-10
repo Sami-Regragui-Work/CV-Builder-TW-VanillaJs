@@ -12,9 +12,13 @@
     --title-white-clr: #f1f7f4;
     --title-black-clr: #0e1318;
     --secondary-text-clr: #575a5e;
-    /* --grad: linear-gradient(); */
+    @theme {
+        --danger-clr: theme(--color-red-500);
+    }
 }
-
+* {
+    @apply transition-colors;
+}
 html {
     font-size: 10px;
 }
@@ -49,23 +53,23 @@ header a:hover {
 }
 
 .main__stepper::before {
-    @apply absolute content-[''] inline-block w-3 h-full bg-(--primary-clr) -z-20 left-1/2;
+    @apply absolute content-[''] inline-block w-3 top-4 bottom-4 bg-(--secondary-clr) -z-20 left-1/2;
 }
 
 .currentStep {
-    @apply border-2 border-(--primary-clr);
+    @apply border-2 border-(--title-white-clr);
 }
 
 .passedStep {
-    @apply bg-(--primary-grad-clr);
+    @apply bg-(--secondary-grad-clr) transition-colors;
 }
 
 .passedStep:not(:last-child)::after {
     /* @apply absolute content-[''] inline-block w-3 h-22 bg-(--primary-grad-clr) -z-10 left-1/2; */
-    @apply absolute content-[''] inline-block w-3 top-10 h-7 bg-(--primary-grad-clr) left-1/2;
+    @apply absolute content-[''] inline-block w-1.5 top-10 h-6 bg-(--secondary-grad-clr) left-[calc(50%+0.1875rem)];
 }
 
 .passedStep:not(:first-child)::before {
     /* @apply absolute content-[''] inline-block w-3 h-22 bg-(--primary-grad-clr) -z-10 left-1/2; */
-    @apply absolute content-[''] inline-block w-3 -top-6 h-6 bg-(--primary-grad-clr) left-1/2;
+    @apply absolute content-[''] inline-block w-1.5 -top-7 h-8 bg-(--secondary-grad-clr) left-[calc(50%+0.1875rem)];
 }

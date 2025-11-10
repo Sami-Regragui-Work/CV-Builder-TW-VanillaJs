@@ -1,39 +1,330 @@
 [
     {
         "id": "1",
-        "title": "Personal Informations"
+        "title": "Personal Informations",
+        "formInputs": [
+            {
+                "type": "file",
+                "label": "Your Picture",
+                "data": "",
+                "required": false,
+                "placeHolder": ""
+            },
+            {
+                "type": "text",
+                "label": "Full Name",
+                "data": "",
+                "required": true,
+                "placeHolder": "Sami Regragui"
+            },
+            {
+                "type": "text",
+                "label": "Title",
+                "data": "",
+                "required": true,
+                "placeHolder": "Full-Stack Developer"
+            },
+            {
+                "type": "email",
+                "label": "Email",
+                "data": "",
+                "required": true,
+                "placeHolder": "sami.regragui.work@protonmail.com"
+            },
+            {
+                "type": "phone",
+                "label": "Phone Number",
+                "data": "",
+                "required": true,
+                "placeHolder": "(+212) 600994595"
+            },
+            {
+                "type": "text",
+                "label": "Location",
+                "data": "",
+                "required": false,
+                "placeHolder": "Salé, Morocco"
+            },
+            {
+                "type": "text",
+                "label": "LinkedIn Username",
+                "data": "",
+                "required": false,
+                "placeHolder": "sami-regragui-8682591b7"
+            }
+        ]
     },
     {
         "id": "2",
-        "title": "Professional Experience"
+        "title": "Professional Experience",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Job Title",
+                "data": "",
+                "required": true,
+                "placeHolder": "Refonte du site web NextTalent avec WordPress"
+            },
+            {
+                "type": "text",
+                "label": "Company Name",
+                "data": "",
+                "required": true,
+                "placeHolder": "WordPress"
+            },
+            {
+                "type": "text",
+                "label": "Location",
+                "data": "",
+                "required": false,
+                "placeHolder": "Quebec, Canada (Remote)"
+            },
+            {
+                "type": "text",
+                "label": "Start Date",
+                "data": "",
+                "required": true,
+                "placeHolder": "2024/12"
+            },
+            {
+                "type": "text",
+                "label": "End Date",
+                "data": "",
+                "required": false,
+                "placeHolder": "2025/02 (or 'Present')"
+            },
+            {
+                "type": "text",
+                "label": "Responsibility 1",
+                "data": "",
+                "required": false,
+                "placeHolder": "Personnalisation de thèmes WordPress et configuration de plugins"
+            },
+            {
+                "type": "text",
+                "label": "Responsibility 2",
+                "data": "",
+                "required": false,
+                "placeHolder": "Intégration de CSS et JavaScript, validation périodique avec le client"
+            },
+            {
+                "type": "text",
+                "label": "Responsibility 3",
+                "data": "",
+                "required": false,
+                "placeHolder": "Gestion de projet agile"
+            },
+            {
+                "type": "text",
+                "label": "Tools Used",
+                "data": "",
+                "required": false,
+                "placeHolder": "WordPress, CSS, JavaScript"
+            }
+        ]
     },
     {
         "id": "3",
-        "title": "Completed Projects"
+        "title": "Completed Projects",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Project Name",
+                "data": "",
+                "required": true,
+                "placeHolder": "Plateforme de gestion d'offres d'emploi"
+            },
+            {
+                "type": "text",
+                "label": "Technologies Used",
+                "data": "",
+                "required": true,
+                "placeHolder": "JavaScript, HTML5, CSS3"
+            },
+            {
+                "type": "text",
+                "label": "Year",
+                "data": "",
+                "required": false,
+                "placeHolder": "2025"
+            },
+            {
+                "type": "text",
+                "label": "Description 1",
+                "data": "",
+                "required": false,
+                "placeHolder": "Application web avec CRUD, filtrage en temps réel et gestion des favoris"
+            },
+            {
+                "type": "text",
+                "label": "Description 2",
+                "data": "",
+                "required": false,
+                "placeHolder": "Validation de formulaires robuste avec message contextuel"
+            },
+            {
+                "type": "text",
+                "label": "Description 3",
+                "data": "",
+                "required": false,
+                "placeHolder": ""
+            }
+        ]
     },
     {
         "id": "4",
-        "title": "Education"
+        "title": "Education",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Degree/Diploma",
+                "data": "",
+                "required": true,
+                "placeHolder": "Licence en Sciences et Techniques, Informatique, Réseau et Multimédia (IRM)"
+            },
+            {
+                "type": "text",
+                "label": "Institution",
+                "data": "",
+                "required": true,
+                "placeHolder": "YouCode - UM6P"
+            },
+            {
+                "type": "text",
+                "label": "Location",
+                "data": "",
+                "required": false,
+                "placeHolder": "Campus Youssoufia, Maroc"
+            },
+            {
+                "type": "text",
+                "label": "Start Year",
+                "data": "",
+                "required": true,
+                "placeHolder": "2025"
+            },
+            {
+                "type": "text",
+                "label": "End Year",
+                "data": "",
+                "required": false,
+                "placeHolder": "Present"
+            }
+        ]
     },
     {
         "id": "5",
-        "title": "Technical Skills"
+        "title": "Technical Skills",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Category",
+                "data": "",
+                "required": true,
+                "placeHolder": "Langages de Programmation"
+            },
+            {
+                "type": "text",
+                "label": "Skills",
+                "data": "",
+                "required": true,
+                "placeHolder": "Java, JavaScript, Python, C, PHP, HTML, CSS, Angular"
+            }
+        ]
     },
     {
         "id": "6",
-        "title": "Soft Skills"
+        "title": "Soft Skills",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Soft Skill",
+                "data": "",
+                "required": true,
+                "placeHolder": "Adaptabilité"
+            },
+            {
+                "type": "text",
+                "label": "Description",
+                "data": "",
+                "required": false,
+                "placeHolder": "Ajustement flexible pour maintenir la cohésion d'équipe"
+            }
+        ]
     },
     {
         "id": "7",
-        "title": "Languages"
+        "title": "Languages",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Language",
+                "data": "",
+                "required": true,
+                "placeHolder": "Arabe"
+            },
+            {
+                "type": "text",
+                "label": "Proficiency Level",
+                "data": "",
+                "required": true,
+                "placeHolder": "Langue maternelle (or A1, A2, B1, B2, C1, C2)"
+            }
+        ]
     },
     {
         "id": "8",
-        "title": "Certifications"
+        "title": "Certifications",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Certification Name",
+                "data": "",
+                "required": true,
+                "placeHolder": "Cisco Certified Network Associate (CCNA)"
+            },
+            {
+                "type": "text",
+                "label": "Issuing Organization",
+                "data": "",
+                "required": true,
+                "placeHolder": "Cisco"
+            },
+            {
+                "type": "text",
+                "label": "Version/Details",
+                "data": "",
+                "required": false,
+                "placeHolder": "Version 7"
+            },
+            {
+                "type": "text",
+                "label": "Date Obtained",
+                "data": "",
+                "required": false,
+                "placeHolder": "2024"
+            }
+        ]
     },
     {
         "id": "9",
-        "title": "Hobbies & Interests"
+        "title": "Hobbies & Interests",
+        "formInputs": [
+            {
+                "type": "text",
+                "label": "Hobby/Interest",
+                "data": "",
+                "required": false,
+                "placeHolder": "Open Source Contribution"
+            },
+            {
+                "type": "text",
+                "label": "Description",
+                "data": "",
+                "required": false,
+                "placeHolder": "Contributing to community projects and learning new technologies"
+            }
+        ]
     },
     {
         "id": "10",

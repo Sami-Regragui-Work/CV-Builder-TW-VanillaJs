@@ -8,9 +8,11 @@
         <title>Document</title>
     </head>
     <body class="bg-(--title-white-clr) overflow-x-hidden">
-        <header class="bg-(--secondary-clr) text-(--title-white-clr) font-bold">
+        <header
+            class="bg-(--secondary-clr) text-(--title-white-clr) font-bold max-w-[1440px] relative"
+        >
             <div
-                class="container flex justify-between min-w-full items-center bg-(--secondary-clr) fixed"
+                class="container justify-between items-center shadow-[inset_0_0_300px_#1d5c95aa] backdrop-blur-lg fixed z-50"
             >
                 <a
                     href="index.html"
@@ -149,7 +151,14 @@
                     </ul>
                 </nav>
             </div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <svg
+                class="pt-34"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+                width="100%"
+                height="20rem"
+                preserveAspectRatio="none"
+            >
                 <path
                     fill="var(--primary-grad-clr)"
                     fill-opacity="1"
@@ -163,7 +172,7 @@
                 <aside id="main__aside" class="self-start hidden">
                     <ol
                         id="main__stepper"
-                        class="main__stepper flex flex-col gap-10 flex-wrap [&_li]:bg-(--primary-clr) [&_li]:rounded-3xl text-(--title-white-clr) font-bold text-2xl [&_li]:h-12 [&_li]:w-2xs [&_li]:flex [&_li]:justify-center [&_li]:items-center overflow-y-hidden"
+                        class="main__stepper flex flex-col gap-10 flex-wrap [&_li]:bg-(--secondary-clr) [&_li]:rounded-3xl text-(--title-white-clr) font-bold text-2xl [&_li]:h-12 [&_li]:w-2xs [&_li]:flex [&_li]:justify-center [&_li]:items-center overflow-y-hidden [&_li]:shadow-[0_0_5px_5px_var(--secondary-clr)] p-4 [&_li]:transition-colors"
                     >
                         <!-- <li class="passedStep currentStep">
                             Personal Informations
@@ -181,18 +190,21 @@
                     </ol>
                 </aside>
                 <div
-                    class="main__center flex items-center text-center flex-col gap-5 mx-auto"
+                    class="main__center flex items-center text-center flex-col gap-5 w-full"
                 >
                     <h1
                         id="main__title"
-                        class="flex justify-center text-(--title-black-clr) font-semibold text-2xl"
+                        class="inline-flex justify-center text-(--title-black-clr) font-semibold text-2xl"
                     ></h1>
                     <section class="w-full">
-                        <form action="" class="flex flex-col items-center">
+                        <form
+                            action=""
+                            class="flex flex-col items-center gap-5"
+                        >
                             <div
                                 class="form__replaceable felx flex-col gap-5"
                             ></div>
-                            <div class="btns flex justify-around w-full">
+                            <div class="btns flex justify-around w-full px-32">
                                 <button
                                     id="previous-btn"
                                     class="btn btn--secondary hidden"

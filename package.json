@@ -1,6 +1,10 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.16",
-    "tailwindcss": "^4.1.16"
-  }
+    "dependencies": {
+        "@tailwindcss/cli": "^4.1.16",
+        "tailwindcss": "^4.1.16"
+    },
+    "scripts": {
+        "dev": "npx tailwindcss -i ./assets/css/custom.css -o ./assets/css/styles.css --watch",
+        "build": "npx tailwindcss -i ./assets/css/custom.css -o ./assets/css/styles.css --minify"
+    }
 }
