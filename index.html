@@ -4,7 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="assets/css/styles.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+            rel="stylesheet"
+        />
         <script src="./assets/js/app.js" defer></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"
+            defer
+        ></script>
         <title>Document</title>
     </head>
     <body class="bg-(--title-white-clr) overflow-x-hidden">
@@ -199,12 +207,14 @@
                     <section class="w-full">
                         <form
                             action=""
-                            class="flex flex-col items-center gap-5"
+                            class="flex flex-col items-center gap-5 h-full"
                         >
                             <div
-                                class="form__replaceable felx flex-col gap-5"
+                                class="form__replaceable felx flex-col gap-5 content-center w-full max-w-[402px]"
                             ></div>
-                            <div class="btns flex justify-around w-full px-32">
+                            <div
+                                class="btns flex justify-around w-full max-w-[402px]"
+                            >
                                 <button
                                     id="previous-btn"
                                     class="btn btn--secondary hidden"

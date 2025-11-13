@@ -2,327 +2,334 @@
     {
         "id": "1",
         "title": "Personal Informations",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "file",
                 "label": "Your Picture",
                 "data": "",
                 "required": false,
-                "placeHolder": ""
+                "placeHolder": "",
+                "cols": 1
             },
             {
                 "type": "text",
                 "label": "Full Name",
                 "data": "",
                 "required": true,
-                "placeHolder": "Sami Regragui"
+                "placeHolder": "Sami Regragui",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Title",
                 "data": "",
                 "required": true,
-                "placeHolder": "Full-Stack Developer"
+                "placeHolder": "Full-Stack Developer",
+                "cols": 2
             },
             {
                 "type": "email",
                 "label": "Email",
                 "data": "",
                 "required": true,
-                "placeHolder": "sami.regragui.work@protonmail.com"
+                "placeHolder": "sami.regragui.work@protonmail.com",
+                "cols": 2
             },
             {
                 "type": "phone",
                 "label": "Phone Number",
                 "data": "",
                 "required": true,
-                "placeHolder": "(+212) 600994595"
+                "placeHolder": "(+212) 600994595",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Location",
                 "data": "",
                 "required": false,
-                "placeHolder": "Salé, Morocco"
+                "placeHolder": "Salé, Morocco",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "LinkedIn Username",
                 "data": "",
                 "required": false,
-                "placeHolder": "sami-regragui-8682591b7"
+                "placeHolder": "sami-regragui-8682591b7",
+                "cols": 2
             }
         ]
     },
     {
         "id": "2",
         "title": "Professional Experience",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Job Title",
                 "data": "",
                 "required": true,
-                "placeHolder": "Refonte du site web NextTalent avec WordPress"
+                "placeHolder": "Refonte du site web NextTalent avec WordPress",
+                "cols": 1
             },
             {
                 "type": "text",
                 "label": "Company Name",
                 "data": "",
                 "required": true,
-                "placeHolder": "WordPress"
+                "placeHolder": "WordPress",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Location",
                 "data": "",
                 "required": false,
-                "placeHolder": "Quebec, Canada (Remote)"
+                "placeHolder": "Quebec, Canada (Remote)",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Start Date",
                 "data": "",
                 "required": true,
-                "placeHolder": "2024/12"
+                "placeHolder": "2024/12",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "End Date",
                 "data": "",
                 "required": false,
-                "placeHolder": "2025/02 (or 'Present')"
+                "placeHolder": "2025/02 (or 'Present')",
+                "cols": 2
             },
             {
-                "type": "text",
-                "label": "Responsibility 1",
-                "data": "",
+                "type": "tags",
+                "label": "Responsibilities",
+                "data": [],
                 "required": false,
-                "placeHolder": "Personnalisation de thèmes WordPress et configuration de plugins"
+                "placeHolder": "Personnalisation de thèmes WordPress et configuration de plugins",
+                "cols": 1
             },
             {
-                "type": "text",
-                "label": "Responsibility 2",
-                "data": "",
-                "required": false,
-                "placeHolder": "Intégration de CSS et JavaScript, validation périodique avec le client"
-            },
-            {
-                "type": "text",
-                "label": "Responsibility 3",
-                "data": "",
-                "required": false,
-                "placeHolder": "Gestion de projet agile"
-            },
-            {
-                "type": "text",
+                "type": "tags",
                 "label": "Tools Used",
-                "data": "",
+                "data": [],
                 "required": false,
-                "placeHolder": "WordPress, CSS, JavaScript"
+                "placeHolder": "WordPress, CSS, JavaScript",
+                "cols": 1
             }
         ]
     },
     {
         "id": "3",
         "title": "Completed Projects",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Project Name",
                 "data": "",
                 "required": true,
-                "placeHolder": "Plateforme de gestion d'offres d'emploi"
+                "placeHolder": "Plateforme de gestion d'offres d'emploi",
+                "cols": 1
             },
             {
-                "type": "text",
+                "type": "tags",
                 "label": "Technologies Used",
-                "data": "",
+                "data": [],
                 "required": true,
-                "placeHolder": "JavaScript, HTML5, CSS3"
+                "placeHolder": "JavaScript, HTML5, CSS3",
+                "cols": 1
             },
             {
                 "type": "text",
                 "label": "Year",
                 "data": "",
                 "required": false,
-                "placeHolder": "2025"
+                "placeHolder": "2025",
+                "cols": 1
             },
             {
-                "type": "text",
-                "label": "Description 1",
-                "data": "",
+                "type": "tags",
+                "label": "Description",
+                "data": [],
                 "required": false,
-                "placeHolder": "Application web avec CRUD, filtrage en temps réel et gestion des favoris"
-            },
-            {
-                "type": "text",
-                "label": "Description 2",
-                "data": "",
-                "required": false,
-                "placeHolder": "Validation de formulaires robuste avec message contextuel"
-            },
-            {
-                "type": "text",
-                "label": "Description 3",
-                "data": "",
-                "required": false,
-                "placeHolder": ""
+                "placeHolder": "Application web avec CRUD, filtrage en temps réel",
+                "cols": 1
             }
         ]
     },
     {
         "id": "4",
         "title": "Education",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Degree/Diploma",
                 "data": "",
                 "required": true,
-                "placeHolder": "Licence en Sciences et Techniques, Informatique, Réseau et Multimédia (IRM)"
+                "placeHolder": "Licence en Sciences et Techniques, Informatique, Réseau et Multimédia (IRM)",
+                "cols": 1
             },
             {
                 "type": "text",
                 "label": "Institution",
                 "data": "",
                 "required": true,
-                "placeHolder": "YouCode - UM6P"
+                "placeHolder": "YouCode - UM6P",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Location",
                 "data": "",
                 "required": false,
-                "placeHolder": "Campus Youssoufia, Maroc"
+                "placeHolder": "Campus Youssoufia, Maroc",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Start Year",
                 "data": "",
                 "required": true,
-                "placeHolder": "2025"
+                "placeHolder": "2025",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "End Year",
                 "data": "",
                 "required": false,
-                "placeHolder": "Present"
+                "placeHolder": "Present",
+                "cols": 2
             }
         ]
     },
     {
         "id": "5",
         "title": "Technical Skills",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Category",
                 "data": "",
                 "required": true,
-                "placeHolder": "Langages de Programmation"
+                "placeHolder": "Langages de Programmation",
+                "cols": 1
             },
             {
-                "type": "text",
+                "type": "tags",
                 "label": "Skills",
-                "data": "",
+                "data": [],
                 "required": true,
-                "placeHolder": "Java, JavaScript, Python, C, PHP, HTML, CSS, Angular"
+                "placeHolder": "Java, JavaScript, Python, C, PHP",
+                "cols": 1
             }
         ]
     },
     {
         "id": "6",
         "title": "Soft Skills",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Soft Skill",
                 "data": "",
                 "required": true,
-                "placeHolder": "Adaptabilité"
+                "placeHolder": "Adaptabilité",
+                "cols": 1
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "label": "Description",
                 "data": "",
                 "required": false,
-                "placeHolder": "Ajustement flexible pour maintenir la cohésion d'équipe"
+                "placeHolder": "Ajustement flexible pour maintenir la cohésion d'équipe",
+                "cols": 1
             }
         ]
     },
     {
         "id": "7",
         "title": "Languages",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Language",
                 "data": "",
                 "required": true,
-                "placeHolder": "Arabe"
+                "placeHolder": "Arabe",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Proficiency Level",
                 "data": "",
                 "required": true,
-                "placeHolder": "Langue maternelle (or A1, A2, B1, B2, C1, C2)"
+                "placeHolder": "Langue maternelle",
+                "cols": 2
             }
         ]
     },
     {
         "id": "8",
         "title": "Certifications",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Certification Name",
                 "data": "",
                 "required": true,
-                "placeHolder": "Cisco Certified Network Associate (CCNA)"
+                "placeHolder": "Cisco Certified Network Associate (CCNA)",
+                "cols": 1
             },
             {
                 "type": "text",
                 "label": "Issuing Organization",
                 "data": "",
                 "required": true,
-                "placeHolder": "Cisco"
+                "placeHolder": "Cisco",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Version/Details",
                 "data": "",
                 "required": false,
-                "placeHolder": "Version 7"
+                "placeHolder": "Version 7",
+                "cols": 2
             },
             {
                 "type": "text",
                 "label": "Date Obtained",
                 "data": "",
                 "required": false,
-                "placeHolder": "2024"
+                "placeHolder": "2024",
+                "cols": 1
             }
         ]
     },
     {
         "id": "9",
         "title": "Hobbies & Interests",
-        "formInputs": [
+        "formReaders": [
             {
                 "type": "text",
                 "label": "Hobby/Interest",
                 "data": "",
                 "required": false,
-                "placeHolder": "Open Source Contribution"
+                "placeHolder": "Open Source Contribution",
+                "cols": 1
             },
             {
-                "type": "text",
+                "type": "richtext",
                 "label": "Description",
                 "data": "",
                 "required": false,
-                "placeHolder": "Contributing to community projects and learning new technologies"
+                "placeHolder": "Contributing to community projects and learning new technologies",
+                "cols": 1
             }
         ]
     },
